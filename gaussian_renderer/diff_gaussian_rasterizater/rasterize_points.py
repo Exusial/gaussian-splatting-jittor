@@ -7,7 +7,7 @@ from typing import Tuple
 
 header_path = os.path.join(os.path.dirname(__file__), 'cuda_rasterizer')
 glm_path = os.path.join(os.path.dirname(__file__),'third_party','glm')
-proj_options = {f'FLAGS: -I"{header_path}" -I"{glm_path}" -l"CudaRasterizer" -L"{os.path.dirname(__file__)}"':1}
+proj_options = {f'FLAGS: -I"{header_path}" -I"{glm_path}" -l"CudaRasterizer" -L"{os.path.join(os.path.dirname(__file__), "build")}"':1}
 # proj_options = {f'FLAGS: -I"./cuda_rasterizer" -I"./third_paart/glm" -l"CudaRasterizer" -L"./"':1}
 jt.flags.use_cuda = 1
 cuda_header = """
