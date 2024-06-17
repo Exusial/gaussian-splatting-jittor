@@ -31,4 +31,5 @@ RUN pip install --upgrade pip
 
 RUN pip install jittor \ 
     cupy-cuda11x \
-    plyfile
+    plyfile \
+    opencv-python

@@ -41,8 +41,8 @@ def render_set(model_path, name, iteration, views, gaussians, pipeline, backgrou
     for idx, view in enumerate(tqdm(views, desc="Rendering progress")):
         rendering = render(view, gaussians, pipeline, background)["render"]
         gt = view.original_image[0:3, :, :]
-        save_image(rendering, os.path.join(render_path, '{0:05d}'.format(idx) + ".png"))
-        save_image(gt, os.path.join(gts_path, '{0:05d}'.format(idx) + ".png"))
+        save_image(rendering, os.path.join(render_path, f'{idx}' + ".png"))
+        save_image(gt, os.path.join(gts_path, f'{idx}' + ".png"))
         
 def render_sets(dataset : ModelParams, iteration : int, pipeline : PipelineParams, skip_train : bool, skip_test : bool):
     with jt.no_grad():
