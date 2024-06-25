@@ -15,16 +15,17 @@ python -m jittor.test.test_example
 export CUDACXX=你的cuda的nvcc路径
 
 cd gaussian_renderer/diff_gaussian_rasterizater
+mkdir build && cd build
 cmake .. -DCMAKE_CXX_COMPILER=g++ -DCMAKE_CUDA_ARCHITECTURES=86(根据显卡版本选用70.75.86)
 make -j4
 
-cd ../..
-cd scene/simple_knn
+cd ../../../scene/simple_knn
+mkdir build && cd build
 cmake ..
 make -j4
 ~~~
 
-编译完毕后，后续可以直接使用jittor引用对应代码。
+编译完毕后，后续可以直接使用jittor引用对应代码。注意选手修改了代码后需要**重新编译**！
 为了方便同学们，我们也提供了Dockerfile用于直接提供可运行环境。执行如下代码即可：
 
 ~~~
@@ -52,4 +53,6 @@ python train.py -s path_to_data --eval
 python render.py -m path_to_output
 ~~~
 
-选手可以根据需求调整。但是必须保证输出格式和提交要求一致。比赛不允许选手使用除给定数据以外的其他输入。
+最后，选手需要把渲染图片按照渲染得到的名称和顺序组织，放入对应场景名称的文件夹中。把所有文件夹打包压缩包上传。
+
+选手可以根据需求调整代码，但是必须保证输出格式和提交要求一致。比赛不允许选手使用除给定数据以外的其他输入。
