@@ -5,6 +5,7 @@
 ~~~
 sudo apt install libomp-dev
 python -m pip install jittor
+pip install numpy==1.26.4
 # 检测是否成功安装
 python -m jittor.test.test_example
 ~~~
