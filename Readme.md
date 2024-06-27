@@ -29,7 +29,7 @@ make -j4
 为了方便同学们，我们也提供了Dockerfile用于直接提供可运行环境。执行如下代码即可：
 
 ~~~
-sudo docker build -t comp 
+sudo docker build -t comp .
 sudo docker image list （查看镜像id）
 sudo docker run -it --gpus all --name comp_gs 你的镜像id
 sudo docker ps -a （查看容器id）
