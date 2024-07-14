@@ -1,4 +1,8 @@
-- 安装指南
+## 仓库说明
+
+本仓库包含对文章"3D Gaussian Splatting for Real-Time Radiance Field Rendering"的基于计图深度学习框架的实现。本仓库为粤港澳算法大赛版本。
+
+## 安装指南
 
 首先安装jittor：
 
@@ -40,7 +44,7 @@ sudo docker cp xx comp_gs:xx 拷贝文件到容器中
 
 比赛的最后评测阶段，要求选手提交代码用于复现。如果选手环境难以复现，会要求选手提供Docker镜像用于复现。
 
-- 运行指南
+## 运行指南
 
 框架的运行指令如下。
 
@@ -57,3 +61,10 @@ python render.py -m path_to_output
 最后，选手需要把渲染图片按照渲染得到的名称和顺序组织，放入对应场景名称的文件夹中。把所有文件夹打包压缩包上传。
 
 选手可以根据需求调整代码，但是必须保证输出格式和提交要求一致。比赛不允许选手使用除给定数据以外的其他输入。
+
+## Acknowledgements
+
+本仓库的代码参考了如下仓库：
+
+- [3DGS](https://github.com/graphdeco-inria/gaussian-splatting/)
+- [Jittor-LPIPS](https://github.com/ty625911724/Jittor_Perceptual-Similarity-Metric)
